@@ -33,6 +33,10 @@ export default function ExperienceCard2024() {
           <Image src="/skills/ts.svg" alt="ts" width={25} height={25} />
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
+          Exploring new land | Deno Land{" "}
+          <Image src="/skills/deno.svg" alt="deno" width={25} height={25} />
+        </CardDescription>
+        <CardDescription className="flex items-center gap-1">
           Until now I am in love with{" "}
           <Image src="/skills/nestjs.svg" alt="nestjs" width={25} height={25} />
         </CardDescription>

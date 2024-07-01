@@ -3,24 +3,30 @@ import { ClientProjectType } from "./components/clients-projects/clientProjectCa
 import { ClientType } from "./components/clients/clientCard";
 import { ProjectType } from "./components/projects/projectCard";
 
+export const programmingLanguages: SkillType[] = [
+  { id: "1", icon: "/skills/js.svg", body: "JavaScript" },
+  { id: "2", icon: "/skills/ts.svg", body: "TypeScript" },
+  { id: "3", icon: "/skills/c-sharp.svg", body: "c sharp" },
+  { id: "4", icon: "/skills/java.svg", body: "Java" },
+];
+
 export const skills: SkillType[] = [
   { id: "1", icon: "/skills/html.svg", body: "HTML" },
   { id: "2", icon: "/skills/css.svg", body: "CSS" },
-  { id: "3", icon: "/skills/js.svg", body: "JavaScript" },
-  { id: "4", icon: "/skills/scss.svg", body: "Scss" },
-  { id: "5", icon: "/skills/ts.svg", body: "TypeScript" },
-  { id: "6", icon: "/skills/reactjs.svg", body: "ReactJs" },
-  { id: "7", icon: "/skills/tailwindcss.svg", body: "TailwindCss" },
-  { id: "8", icon: "/skills/redux.svg", body: "Redux" },
-  { id: "9", icon: "/skills/nextjs.svg", body: "NextJs" },
-  { id: "10", icon: "/skills/redux.svg", body: "ReduxToolkit" },
-  { id: "11", icon: "/skills/solid.svg", body: "SolidJs" },
-  { id: "12", icon: "/skills/zustand.svg", body: "Zustand" },
-  { id: "13", icon: "/skills/nodejs.svg", body: "NodeJs" },
-  { id: "14", icon: "/skills/expressjs.svg", body: "ExpressJs" },
-  { id: "15", icon: "/skills/nestjs.svg", body: "NestJs" },
-  { id: "16", icon: "/skills/git.svg", body: "Git" },
-  { id: "17", icon: "/skills/vitejs.svg", body: "Vite" },
+  { id: "3", icon: "/skills/scss.svg", body: "Scss" },
+  { id: "4", icon: "/skills/reactjs.svg", body: "React js" },
+  { id: "5", icon: "/skills/tailwindcss.svg", body: "Tailwind css" },
+  { id: "6", icon: "/skills/redux.svg", body: "Redux" },
+  { id: "7", icon: "/skills/nextjs.svg", body: "Next js" },
+  { id: "8", icon: "/skills/redux.svg", body: "Redux Toolkit" },
+  { id: "9", icon: "/skills/solid.svg", body: "Solid js" },
+  { id: "10", icon: "/skills/zustand.svg", body: "Zustand" },
+  { id: "11", icon: "/skills/nodejs.svg", body: "Node js" },
+  { id: "12", icon: "/skills/expressjs.svg", body: "Express js" },
+  { id: "13", icon: "/skills/nestjs.svg", body: "Nest js" },
+  { id: "14", icon: "/skills/deno.svg", body: "Deno js" },
+  { id: "15", icon: "/skills/git.svg", body: "Git" },
+  { id: "16", icon: "/skills/vitejs.svg", body: "Vite" },
 ];
 
 export const projects: ProjectType[] = [

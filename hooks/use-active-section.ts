@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function useActiveSection() {
-  const [activeSection, setActiveSection] = useState("");
+  const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
     function handleScroll() {
