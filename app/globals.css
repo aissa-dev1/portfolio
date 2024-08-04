@@ -4,13 +4,13 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 217 40% 96%; /*0 0% 100%*/
     --foreground: 240 10% 3.9%;
 
-    --card: 0 0% 100%;
+    --card: 217 40% 96%; /*0 0% 100%*/
     --card-foreground: 240 10% 3.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 217 40% 96%; /*0 0% 100%*/
     --popover-foreground: 240 10% 3.9%;
 
     --primary: 240 5.9% 10%;
@@ -36,13 +36,13 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 218 13% 12%; /*240 10% 3.9%*/
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 218 13% 12%; /*240 10% 3.9%*/
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 218 13% 12%; /*240 10% 3.9%*/
     --popover-foreground: 0 0% 98%;
 
     --primary: 0 0% 98%;
@@ -75,6 +75,55 @@
   }
 }
 
+:root {
+  --color: #7f2ac5;
+
+  .color-purple-bright {
+    --color: #7f2ac5;
+  }
+
+  .color-teal {
+    --color: #008080;
+  }
+
+  .color-indigo {
+    --color: #4b0082;
+  }
+
+  .color-purple-dark {
+    --color: #800080;
+  }
+
+  .color-cyan {
+    --color: #00ced1;
+  }
+
+  .color-blue {
+    --color: #4682b4;
+  }
+
+  .color-green {
+    --color: #3cb371;
+  }
+
+  .color-red {
+    --color: #cd5c5c;
+  }
+
+  .color-orange {
+    --color: #ff8c00;
+  }
+
+  .color-yellow {
+    --color: #ffd700;
+  }
+}
+
 body {
   scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--color);
+  color: #fff;
 }

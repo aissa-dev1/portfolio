@@ -7,7 +7,8 @@ export default function ClientsProjects() {
   return (
     <SectionSpacing>
       <SectionStarter>
-        A selection of <span className="text-purple-700">Clients Projects</span>
+        A selection of{" "}
+        <span className="text-[var(--color)]">Clients Projects</span>
       </SectionStarter>
       <ClientsProjectsList list={clientsProjects} />
     </SectionSpacing>

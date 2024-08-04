@@ -31,7 +31,7 @@ export default function Clients() {
     <SectionSpacing id="testimonials">
       <SectionStarter>
         Kind words from{" "}
-        <span className="text-purple-700">Satisfied Clients</span>
+        <span className="text-[var(--color)]">Satisfied Clients</span>
       </SectionStarter>
       <div className="flex items-center justify-center p-10 md:p-0">
         <ClientsCarousel />

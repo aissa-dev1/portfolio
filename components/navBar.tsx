@@ -4,6 +4,9 @@ import { useSmoothScroll } from "@/hooks/use-smooth-scroll";
 import Container from "./container";
 import useActiveSection from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "./modeToggle";
+import { ColorChoose } from "./colorChoose";
+import { useColor } from "@/hooks/use-color";
 
 interface NavLinkProps {
   href: string;
@@ -18,11 +21,10 @@ function NavLink({ href, content, active, activeSection }: NavLinkProps) {
       href={href}
       target="_self"
       className={cn(
-        "p-0.5 rounded font-medium transition-colors duration-300 lg:px-4 lg:py-2",
+        "p-0.5 rounded font-medium transition-colors duration-300",
         {
-          "bg-purple-700 text-white": activeSection === active,
-          "text-purple-700 hover:bg-purple-200 hover:text-purple-900":
-            activeSection !== active,
+          "bg-[var(--color)] text-white": activeSection === active,
+          "hover:opacity-85": activeSection !== active,
         }
       )}
     >
@@ -32,11 +34,12 @@ function NavLink({ href, content, active, activeSection }: NavLinkProps) {
 }
 
 export default function NavBar() {
+  useColor();
   useSmoothScroll();
   const { activeSection } = useActiveSection();
 
   return (
-    <nav className="fixed top-0 left-0 w-full flex flex-col justify-center h-28 shadow-sm shadow-black/10 bg-opacity-25 backdrop-blur-lg backdrop-filter z-10">
+    <nav className="fixed top-0 left-0 w-full flex flex-col justify-center h-20 shadow-sm shadow-black/10 dark:shadow-white/10 bg-opacity-25 backdrop-blur-lg backdrop-filter z-10">
       <Container className="flex items-center justify-between gap-1 lg:justify-center lg:gap-4">
         <NavLink
           href="#about"

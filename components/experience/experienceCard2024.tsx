@@ -1,10 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardDescription, CardTitle } from "../ui/card";
+import { useTheme } from "next-themes";
 
 export default function ExperienceCard2024() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <Card className="flex flex-col gap-6 p-6 lg:flex-row lg:items-center lg:col-span-2">
-      <CardTitle className="shrink-0">2024</CardTitle>
+      <CardTitle className="text-2xl shrink-0">2024</CardTitle>
       <div className="flex flex-col gap-1">
         <CardDescription>The year of the Back End.</CardDescription>
         <CardDescription>
@@ -17,6 +22,12 @@ export default function ExperienceCard2024() {
         <CardDescription className="flex items-center gap-1">
           Creating API after API, burning Node and Express js{" "}
           <Image src="/skills/nodejs.svg" alt="nodejs" width={25} height={25} />
+          <Image
+            src={`/skills/expressjs-${resolvedTheme}.svg`}
+            alt="expressjs"
+            width={25}
+            height={25}
+          />
         </CardDescription>
         <CardDescription>
           Learning new Back End concepts and try to apply them with the Front
@@ -24,7 +35,12 @@ export default function ExperienceCard2024() {
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
           Creating Full Stack Web Projects{" "}
-          <Image src="/skills/nextjs.svg" alt="nextjs" width={25} height={25} />
+          <Image
+            src={`/skills/nextjs-${resolvedTheme}.svg`}
+            alt="nextjs"
+            width={25}
+            height={25}
+          />
           <Image src="/skills/nestjs.svg" alt="nestjs" width={25} height={25} />
         </CardDescription>
         <CardDescription className="flex items-center gap-1">

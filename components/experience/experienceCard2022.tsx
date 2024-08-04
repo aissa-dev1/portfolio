@@ -4,7 +4,7 @@ import { Card, CardDescription, CardTitle } from "../ui/card";
 export default function ExperienceCard2022() {
   return (
     <Card className="flex flex-col gap-6 p-6 lg:flex-row lg:items-center">
-      <CardTitle className="shrink-0">2022</CardTitle>
+      <CardTitle className="text-2xl shrink-0">2022</CardTitle>
       <div className="flex flex-col gap-1">
         <CardDescription>The great journey started here.</CardDescription>
         <CardDescription className="flex items-center gap-1">

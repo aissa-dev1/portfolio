@@ -1,10 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardDescription, CardTitle } from "../ui/card";
+import { useTheme } from "next-themes";
 
 export default function ExperienceCard2023() {
+  const { resolvedTheme } = useTheme();
+
   return (
     <Card className="flex flex-col gap-6 p-6 lg:flex-row lg:items-center">
-      <CardTitle className="shrink-0">2023</CardTitle>
+      <CardTitle className="text-2xl shrink-0">2023</CardTitle>
       <div className="flex flex-col gap-1">
         <CardDescription>As the previous year.</CardDescription>
         <CardDescription className="flex items-center gap-1">
@@ -32,7 +37,12 @@ export default function ExperienceCard2023() {
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
           Creating personal projects in the Front End area{" "}
-          <Image src="/skills/nextjs.svg" alt="nextjs" width={25} height={25} />
+          <Image
+            src={`/skills/nextjs-${resolvedTheme}.svg`}
+            alt="nextjs"
+            width={25}
+            height={25}
+          />
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
           In the end of the year I comeback to Back End and I tried to get

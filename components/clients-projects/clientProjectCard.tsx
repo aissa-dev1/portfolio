@@ -1,17 +1,30 @@
 import Image from "next/image";
-import { Card, CardDescription, CardTitle } from "../ui/card";
+import { Card, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
+import { useTheme } from "next-themes";
+
+export type ClientProjectTypeSkill = {
+  icon: string;
+  dynamicIcon: boolean;
+};
 
 export type ClientProjectType = {
   id: string;
   img: string;
   title: string;
   type: "front" | "back" | "full" | "game";
-  skills: string[];
+  skills: ClientProjectTypeSkill[];
   liveSite: string;
 };
 
 interface Props extends ClientProjectType {}
+
+function ClientProjectCardSkill({ icon, dynamicIcon }: ClientProjectTypeSkill) {
+  const { resolvedTheme } = useTheme();
+  const src = `/skills/${dynamicIcon ? `${icon}-${resolvedTheme}` : icon}.svg`;
+
+  return <Image src={src} alt={icon} width={25} height={25} />;
+}
 
 export default function ClientProjectCard({
   img,
@@ -33,15 +46,8 @@ export default function ClientProjectCard({
       <CardTitle>{title}</CardTitle>
       <div className="flex items-center flex-wrap gap-3">
         {skills.map((skill) => {
-          return (
-            <Image
-              key={skill}
-              src={`/skills/${skill}.svg`}
-              alt={skill}
-              width={25}
-              height={25}
-            />
-          );
+          console.log(skill);
+          return <ClientProjectCardSkill key={skill.icon} {...skill} />;
         })}
       </div>
       <a href={liveSite} target="_blank">

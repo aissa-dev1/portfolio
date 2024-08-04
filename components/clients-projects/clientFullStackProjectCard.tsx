@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Card, CardDescription, CardTitle } from "../ui/card";
+import { Card, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import {
   Dialog,
@@ -11,7 +11,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ClientProjectType } from "./clientProjectCard";
+import { ClientProjectType, ClientProjectTypeSkill } from "./clientProjectCard";
+import { useTheme } from "next-themes";
 
 interface Props extends ClientProjectType {}
 
@@ -26,12 +27,13 @@ function DemoDialog({ liveSite }: Props) {
           <DialogTitle>Demo Quick Note</DialogTitle>
           <DialogDescription>
             This is a Full Stack web project requiring both front-end and{" "}
-            <span className="text-purple-700">back-end</span>. The front-end is
-            running smoothly, but there might be a slight{" "}
-            <span className="text-purple-700">delay</span> with the back-end as
-            it’s on a <span className="text-purple-700">free plan</span>. Please
-            allow up to <span className="text-purple-700">1 minute</span> for
-            the initial server response. Thanks for your patience!
+            <span className="text-[var(--color)]">back-end</span>. The front-end
+            is running smoothly, but there might be a slight{" "}
+            <span className="text-[var(--color)]">delay</span> with the back-end
+            as it’s on a <span className="text-[var(--color)]">free plan</span>.
+            Please allow up to{" "}
+            <span className="text-[var(--color)]">1 minute</span> for the
+            initial server response. Thanks for your patience!
           </DialogDescription>
           <a href={liveSite} target="_blank">
             <Button className="w-full">Continue</Button>
@@ -43,6 +45,16 @@ function DemoDialog({ liveSite }: Props) {
       </DialogContent>
     </Dialog>
   );
+}
+
+function ClientFullStackProjectCardSkill({
+  icon,
+  dynamicIcon,
+}: ClientProjectTypeSkill) {
+  const { resolvedTheme } = useTheme();
+  const src = `/skills/${dynamicIcon ? `${icon}-${resolvedTheme}` : icon}.svg`;
+
+  return <Image src={src} alt={icon} width={25} height={25} />;
 }
 
 export default function ClientFullStackProjectCard(props: Props) {
@@ -61,13 +73,7 @@ export default function ClientFullStackProjectCard(props: Props) {
       <div className="flex items-center flex-wrap gap-3">
         {props.skills.map((skill) => {
           return (
-            <Image
-              key={skill}
-              src={`/skills/${skill}.svg`}
-              alt={skill}
-              width={25}
-              height={25}
-            />
+            <ClientFullStackProjectCardSkill key={skill.icon} {...skill} />
           );
         })}
       </div>
