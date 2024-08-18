@@ -3,9 +3,19 @@
 import Image from "next/image";
 import { Card, CardDescription, CardTitle } from "../ui/card";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ExperienceCard2024() {
   const { resolvedTheme } = useTheme();
+  const [nextjsSrc, setNextjsSrc] = useState("");
+  const [expressjsSrc, setExpressjsSrc] = useState("");
+
+  useEffect(() => {
+    if (!resolvedTheme) return;
+
+    setNextjsSrc(`/skills/nextjs-${resolvedTheme}.svg`);
+    setExpressjsSrc(`/skills/expressjs-${resolvedTheme}.svg`);
+  }, [resolvedTheme]);
 
   return (
     <Card className="flex flex-col gap-6 p-6 lg:flex-row lg:items-center lg:col-span-2">
@@ -22,12 +32,9 @@ export default function ExperienceCard2024() {
         <CardDescription className="flex items-center gap-1">
           Creating API after API, burning Node and Express js{" "}
           <Image src="/skills/nodejs.svg" alt="nodejs" width={25} height={25} />
-          <Image
-            src={`/skills/expressjs-${resolvedTheme}.svg`}
-            alt="expressjs"
-            width={25}
-            height={25}
-          />
+          {expressjsSrc ? (
+            <Image src={expressjsSrc} alt="expressjs" width={25} height={25} />
+          ) : null}
         </CardDescription>
         <CardDescription>
           Learning new Back End concepts and try to apply them with the Front
@@ -35,12 +42,9 @@ export default function ExperienceCard2024() {
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
           Creating Full Stack Web Projects{" "}
-          <Image
-            src={`/skills/nextjs-${resolvedTheme}.svg`}
-            alt="nextjs"
-            width={25}
-            height={25}
-          />
+          {nextjsSrc ? (
+            <Image src={nextjsSrc} alt="nextjs" width={25} height={25} />
+          ) : null}
           <Image src="/skills/nestjs.svg" alt="nestjs" width={25} height={25} />
         </CardDescription>
         <CardDescription className="flex items-center gap-1">

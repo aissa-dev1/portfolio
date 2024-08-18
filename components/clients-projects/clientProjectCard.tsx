@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Card, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export type ClientProjectTypeSkill = {
   icon: string;
@@ -21,7 +24,19 @@ interface Props extends ClientProjectType {}
 
 function ClientProjectCardSkill({ icon, dynamicIcon }: ClientProjectTypeSkill) {
   const { resolvedTheme } = useTheme();
-  const src = `/skills/${dynamicIcon ? `${icon}-${resolvedTheme}` : icon}.svg`;
+  const [src, setSrc] = useState("");
+
+  useEffect(() => {
+    if (!resolvedTheme) return;
+    if (!dynamicIcon) {
+      setSrc(`/skills/${icon}.svg`);
+      return;
+    }
+
+    setSrc(`/skills/${icon}-${resolvedTheme}.svg`);
+  }, [resolvedTheme]);
+
+  if (!src) return null;
 
   return <Image src={src} alt={icon} width={25} height={25} />;
 }
@@ -46,7 +61,6 @@ export default function ClientProjectCard({
       <CardTitle>{title}</CardTitle>
       <div className="flex items-center flex-wrap gap-3">
         {skills.map((skill) => {
-          console.log(skill);
           return <ClientProjectCardSkill key={skill.icon} {...skill} />;
         })}
       </div>

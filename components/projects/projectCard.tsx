@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Card, CardDescription, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export type ProjectTypeSkill = {
   icon: string;
@@ -23,7 +24,19 @@ export type ProjectType = {
 
 function ProjectCardSkill({ icon, dynamicIcon }: ProjectTypeSkill) {
   const { resolvedTheme } = useTheme();
-  const src = `/skills/${dynamicIcon ? `${icon}-${resolvedTheme}` : icon}.svg`;
+  const [src, setSrc] = useState("");
+
+  useEffect(() => {
+    if (!resolvedTheme) return;
+    if (!dynamicIcon) {
+      setSrc(`/skills/${icon}.svg`);
+      return;
+    }
+
+    setSrc(`/skills/${icon}-${resolvedTheme}.svg`);
+  }, [resolvedTheme]);
+
+  if (!src) return null;
 
   return <Image src={src} alt={icon} width={25} height={25} />;
 }

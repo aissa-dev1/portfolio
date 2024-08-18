@@ -34,7 +34,6 @@ function NavLink({ href, content, active, activeSection }: NavLinkProps) {
 }
 
 export default function NavBar() {
-  useColor();
   useSmoothScroll();
   const { activeSection } = useActiveSection();
 
@@ -65,6 +64,7 @@ export default function NavBar() {
           active="contact"
           activeSection={activeSection}
         />
+        <ModeToggle />
       </Container>
     </nav>
   );

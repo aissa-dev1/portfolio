@@ -3,9 +3,17 @@
 import Image from "next/image";
 import { Card, CardDescription, CardTitle } from "../ui/card";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ExperienceCard2023() {
   const { resolvedTheme } = useTheme();
+  const [nextjsSrc, setNextjsSrc] = useState("");
+
+  useEffect(() => {
+    if (!resolvedTheme) return;
+
+    setNextjsSrc(`/skills/nextjs-${resolvedTheme}.svg`);
+  }, [resolvedTheme]);
 
   return (
     <Card className="flex flex-col gap-6 p-6 lg:flex-row lg:items-center">
@@ -37,12 +45,9 @@ export default function ExperienceCard2023() {
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
           Creating personal projects in the Front End area{" "}
-          <Image
-            src={`/skills/nextjs-${resolvedTheme}.svg`}
-            alt="nextjs"
-            width={25}
-            height={25}
-          />
+          {nextjsSrc ? (
+            <Image src={nextjsSrc} alt="nextjs" width={25} height={25} />
+          ) : null}
         </CardDescription>
         <CardDescription className="flex items-center gap-1">
           In the end of the year I comeback to Back End and I tried to get

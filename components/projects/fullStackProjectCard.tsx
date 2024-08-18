@@ -13,6 +13,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 interface Props extends ProjectType {}
 
@@ -82,7 +83,19 @@ function RepoDialog({ githubRepo }: Props) {
 
 function FullStackProjectCardSkill({ icon, dynamicIcon }: ProjectTypeSkill) {
   const { resolvedTheme } = useTheme();
-  const src = `/skills/${dynamicIcon ? `${icon}-${resolvedTheme}` : icon}.svg`;
+  const [src, setSrc] = useState("");
+
+  useEffect(() => {
+    if (!resolvedTheme) return;
+    if (!dynamicIcon) {
+      setSrc(`/skills/${icon}.svg`);
+      return;
+    }
+
+    setSrc(`/skills/${icon}-${resolvedTheme}.svg`);
+  }, [resolvedTheme]);
+
+  if (!src) return null;
 
   return <Image src={src} alt={icon} width={25} height={25} />;
 }

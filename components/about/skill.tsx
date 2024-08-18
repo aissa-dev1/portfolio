@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Badge } from "../ui/badge";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 type SkillTypeIcon = {
   current: string;
@@ -17,11 +18,21 @@ export type SkillType = {
 
 interface Props extends SkillType {}
 
-export default function Skill({ id, icon, body }: Props) {
+export default function Skill({ icon, body }: Props) {
   const { resolvedTheme } = useTheme();
-  const src = `/skills/${
-    icon.dynamicIcon ? `${icon.current}-${resolvedTheme}` : icon.current
-  }.svg`;
+  const [src, setSrc] = useState("");
+
+  useEffect(() => {
+    if (!resolvedTheme) return;
+    if (!icon.dynamicIcon) {
+      setSrc(`/skills/${icon.current}.svg`);
+      return;
+    }
+
+    setSrc(`/skills/${icon.current}-${resolvedTheme}.svg`);
+  }, [resolvedTheme]);
+
+  if (!src) return null;
 
   return (
     <Badge

@@ -1,4 +1,3 @@
-import React from "react";
 import SectionSpacing from "../sectionSpacing";
 import SectionStarter from "../sectionStarter";
 import ExperienceCard2022 from "./experienceCard2022";

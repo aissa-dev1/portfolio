@@ -12,9 +12,11 @@ import {
 } from "@/components/ui/dropdown-menu";
 import SunIcon from "./icons/sun";
 import MoonIcon from "./icons/moon";
+import { useColor } from "@/hooks/use-color";
 
 export function ModeToggle() {
   const { setTheme } = useTheme();
+  useColor();
 
   return (
     <DropdownMenu>
