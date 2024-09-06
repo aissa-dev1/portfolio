@@ -8,11 +8,11 @@ import { ThemeProvider } from "@/components/themeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Aissa Bedr | Full Stack Web Developer",
+  title: "Aissa Bedr | Full Stack Engineer",
   description:
     "Highly skilled Web Developer and Designer with over 3 years of experience.",
   openGraph: {
-    title: "Aissa Bedr | Full Stack Web Developer",
+    title: "Aissa Bedr | Full Stack Engineer",
     locale: "en_US",
     type: "website",
     siteName: "Aissa Bedr",

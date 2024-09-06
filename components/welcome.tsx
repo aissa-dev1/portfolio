@@ -23,7 +23,7 @@ export default function Welcome() {
         </h1>
       </div>
       <h3 className="text-2xl font-medium capitalize text-[var(--color)]">
-        {"@"}Full stack web developer
+        {"@"}Full stack engineer
       </h3>
       <p className="text-lg capitalize">
         Transforming ideas into{" "}

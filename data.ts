@@ -6,8 +6,9 @@ import { ProjectType } from "./components/projects/projectCard";
 export const programmingLanguages: SkillType[] = [
   { id: "1", icon: { current: "js", dynamicIcon: false }, body: "JavaScript" },
   { id: "2", icon: { current: "ts", dynamicIcon: false }, body: "TypeScript" },
-  { id: "3", icon: { current: "c-sharp", dynamicIcon: false }, body: "C#" },
-  { id: "4", icon: { current: "java", dynamicIcon: false }, body: "Java" },
+  { id: "3", icon: { current: "rust", dynamicIcon: false }, body: "Rust" },
+  { id: "4", icon: { current: "c-sharp", dynamicIcon: false }, body: "C#" },
+  { id: "5", icon: { current: "java", dynamicIcon: false }, body: "Java" },
 ];
 
 export const skills: SkillType[] = [
@@ -67,7 +68,7 @@ export const projects: ProjectType[] = [
     img: "/projects/poll-next.png",
     title: "Poll Next - Full Stack Polls Web Application",
     description:
-      "Create your Poll Next account, create your own polls, share them with friends and wait their reactions and have fun.",
+      "Create your Poll Next account, create your own polls, share them with friends and wait their reaction and have fun.",
     type: "full",
     skills: [
       {
@@ -165,7 +166,7 @@ export const projects: ProjectType[] = [
   {
     id: "4",
     img: "/projects/next-dashboard.png",
-    title: "Next Dashboard - Solid Front End Project",
+    title: "Next Dashboard - Explore",
     description:
       "You want to explore a new world of all web techniques out there? you need to try.",
     type: "front",
@@ -216,7 +217,7 @@ export const projects: ProjectType[] = [
   {
     id: "6",
     img: "/projects/budget-app.png",
-    title: "Budget App - Best Vanilla TypeScript Project",
+    title: "Budget App - Start here",
     description:
       "Do you remember when you have a budget to shop, then have a list of products you don't know from where to start! you will start here.",
     type: "front",
@@ -234,8 +235,8 @@ export const projects: ProjectType[] = [
         dynamicIcon: false,
       },
     ],
-    githubRepo: "https://github.com/aissa-dev1/budgets-app",
-    liveSite: "https://aissa-dev1-budgets-app.netlify.app",
+    githubRepo: "https://github.com/aissa-dev1/budget-app",
+    liveSite: "https://aissa-dev1-budget-app.netlify.app",
   },
   {
     id: "7",
@@ -292,7 +293,7 @@ export const clients: ClientType[] = [
     id: "1",
     fullName: "Soufiane The Great",
     message:
-      "Perfect person. Finished the job. no complaints. Really fast. and responding all of the time even Saturday and Sunday.",
+      "Really good working with him. Takes feedback well and is quick to update mistakes!",
   },
   {
     id: "2",
