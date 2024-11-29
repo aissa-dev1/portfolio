@@ -24,7 +24,7 @@ function DemoDialog({ liveSite }: Props) {
         <Button>Live demo</Button>
       </DialogTrigger>
       <DialogContent>
-        <DialogHeader>
+        <DialogHeader className="flex flex-col gap-3">
           <DialogTitle>Demo Quick Note</DialogTitle>
           <DialogDescription>
             This is a Full Stack web project requiring both front-end and{" "}
@@ -36,12 +36,14 @@ function DemoDialog({ liveSite }: Props) {
             <span className="text-[var(--color)]">1 minute</span> for the
             initial server response. Thanks for your patience!
           </DialogDescription>
-          <a href={liveSite} target="_blank">
-            <Button className="w-full">Continue</Button>
-          </a>
-          <DialogTrigger asChild>
-            <Button variant="outline">Cancel</Button>
-          </DialogTrigger>
+          <div className="flex flex-col gap-2 w-full">
+            <a href={liveSite} target="_blank">
+              <Button className="w-full">Continue</Button>
+            </a>
+            <DialogTrigger asChild>
+              <Button variant="outline">Cancel</Button>
+            </DialogTrigger>
+          </div>
         </DialogHeader>
       </DialogContent>
     </Dialog>
@@ -57,7 +59,7 @@ function RepoDialog({ githubRepo }: Props) {
         <Button>Github repo</Button>
       </DialogTrigger>
       <DialogContent>
-        <DialogHeader>
+        <DialogHeader className="flex flex-col gap-3.5">
           <DialogTitle>Repo Quick Note</DialogTitle>
           <DialogDescription>
             This is a <span className="text-[var(--color)]">Full Stack</span>{" "}
@@ -65,16 +67,18 @@ function RepoDialog({ githubRepo }: Props) {
             <span className="text-[var(--color)]">front-end</span> and{" "}
             <span className="text-[var(--color)]">back-end</span>.
           </DialogDescription>
-          {repos.map((repo, i) => (
-            <a href={repo} target="_blank" key={repo}>
-              <Button className="w-full">
-                {i === 0 ? "Front End" : "Back End"}
-              </Button>
-            </a>
-          ))}
-          <DialogTrigger asChild>
-            <Button variant="outline">Cancel</Button>
-          </DialogTrigger>
+          <div className="flex flex-col gap-2">
+            {repos.map((repo, i) => (
+              <a href={repo} target="_blank" key={repo}>
+                <Button className="w-full">
+                  {i === 0 ? "Front End" : "Back End"}
+                </Button>
+              </a>
+            ))}
+            <DialogTrigger asChild>
+              <Button variant="outline">Cancel</Button>
+            </DialogTrigger>
+          </div>
         </DialogHeader>
       </DialogContent>
     </Dialog>

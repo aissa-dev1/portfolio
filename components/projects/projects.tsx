@@ -1,4 +1,4 @@
-import { projects } from "@/data";
+import { projects } from "@/data/projects";
 import SectionSpacing from "../sectionSpacing";
 import SectionStarter from "../sectionStarter";
 import ProjectsList from "./projectsList";

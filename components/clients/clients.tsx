@@ -1,4 +1,3 @@
-import { clients } from "@/data";
 import SectionSpacing from "../sectionSpacing";
 import SectionStarter from "../sectionStarter";
 import {
@@ -9,6 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import ClientCard from "./clientCard";
+import { clients } from "@/data/clients";
 
 function ClientsCarousel() {
   return (

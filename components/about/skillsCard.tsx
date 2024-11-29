@@ -1,28 +1,58 @@
+"use client";
+
+import { programmingLanguages } from "@/data/programming-languages";
 import { Card, CardContent, CardDescription, CardHeader } from "../ui/card";
 import Skills from "./skills";
-import { programmingLanguages, skills } from "@/data";
+import { skills } from "@/data/skills";
+import { Button } from "../ui/button";
+import { useState } from "react";
+
+type SkillsCardSection = "programming-languages" | "web-skills";
 
 export function SkillsCard() {
+  const [currentSection, setCurrentSection] = useState<SkillsCardSection>(
+    "programming-languages"
+  );
+
   return (
     <Card className="bg-blue-700/5">
       <CardHeader>
-        <CardDescription className="text-center lg:text-start">
-          I always learn new skills in my field and improve my Tech Stack
-        </CardDescription>
-      </CardHeader>
-      <CardContent className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
-          <CardDescription className="text-center lg:text-start">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+          <Button
+            variant={
+              currentSection === "programming-languages"
+                ? "default"
+                : "secondary"
+            }
+            onClick={() => setCurrentSection("programming-languages")}
+          >
             Programming languages
-          </CardDescription>
-          <Skills list={programmingLanguages} />
-        </div>
-        <div className="flex flex-col gap-2">
-          <CardDescription className="text-center lg:text-start">
+          </Button>
+          <Button
+            variant={currentSection === "web-skills" ? "default" : "secondary"}
+            onClick={() => setCurrentSection("web-skills")}
+          >
             Web skills
-          </CardDescription>
-          <Skills list={skills} />
+          </Button>
         </div>
+      </CardHeader>
+      <CardContent>
+        {currentSection === "programming-languages" && (
+          <div className="flex flex-col gap-2">
+            <CardDescription className="text-center lg:text-start">
+              Programming languages
+            </CardDescription>
+            <Skills list={programmingLanguages} />
+          </div>
+        )}
+        {currentSection === "web-skills" && (
+          <div className="flex flex-col gap-2">
+            <CardDescription className="text-center lg:text-start">
+              Web skills
+            </CardDescription>
+            <Skills list={skills} />
+          </div>
+        )}
       </CardContent>
     </Card>
   );
