@@ -4,44 +4,35 @@ import { useState } from "react";
 import SectionSpacing from "../sectionSpacing";
 import SectionStarter from "../sectionStarter";
 import { Button } from "../ui/button";
-import ExperienceCard, { ExperienceCardYear } from "./experienceCard";
+import ExperienceCard, { ExperienceCardData } from "./experienceCard";
 import {
-  experienceData2022,
-  experienceData2023,
-  experienceData2024,
+  experienceData,
+  experienceDataYears,
+  ExperienceYear,
 } from "@/data/experience";
 
 export default function Experience() {
-  const [currentCard, setCurrentCard] = useState<ExperienceCardYear>("2022");
+  const [experienceYear, setExperienceYear] = useState<ExperienceYear>("2022");
 
   return (
     <SectionSpacing id="experience">
       <SectionStarter>
         My <span className="text-[var(--color)]">Experience</span>
       </SectionStarter>
-      <div className="grid grid-cols-3 gap-3">
-        <Button
-          variant={currentCard === "2022" ? "default" : "outline"}
-          onClick={() => setCurrentCard("2022")}
-        >
-          2022
-        </Button>
-        <Button
-          variant={currentCard === "2023" ? "default" : "outline"}
-          onClick={() => setCurrentCard("2023")}
-        >
-          2023
-        </Button>
-        <Button
-          variant={currentCard === "2024" ? "default" : "outline"}
-          onClick={() => setCurrentCard("2024")}
-        >
-          2024
-        </Button>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-3">
+        {experienceDataYears.map((year) => (
+          <Button
+            key={year}
+            variant={experienceYear === year ? "default" : "secondary"}
+            onClick={() => setExperienceYear(year)}
+          >
+            {year}
+          </Button>
+        ))}
       </div>
-      {currentCard === "2022" && <ExperienceCard {...experienceData2022} />}
-      {currentCard === "2023" && <ExperienceCard {...experienceData2023} />}
-      {currentCard === "2024" && <ExperienceCard {...experienceData2024} />}
+      <ExperienceCard
+        {...(experienceData[experienceYear] as ExperienceCardData)}
+      />
     </SectionSpacing>
   );
 }
