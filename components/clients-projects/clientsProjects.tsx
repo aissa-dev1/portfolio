@@ -5,7 +5,7 @@ import ClientsProjectsList from "./clientsProjectsList";
 
 export default function ClientsProjects() {
   return (
-    <SectionSpacing>
+    <SectionSpacing id="clients_projects">
       <SectionStarter>
         A selection of{" "}
         <span className="text-[var(--color)]">Clients Projects</span>
