@@ -1,6 +1,6 @@
 import { Card, CardDescription, CardTitle } from "../ui/card";
 
-export type ExperienceCardYear = "2022" | "2023" | "2024";
+export type ExperienceCardYear = "2022" | "2023" | "2024" | "2025";
 
 export interface ExperienceCardData {
   year: string;
@@ -19,7 +19,7 @@ export default function ExperienceCard({
       <div className="flex flex-col gap-1">
         {highlights.map((desc, index) => (
           <CardDescription key={index} className="flex items-center gap-1">
-            {desc}
+            - {desc}
           </CardDescription>
         ))}
       </div>
