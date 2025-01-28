@@ -86,8 +86,9 @@ export default function ContactMeDialog() {
               />
             </div>
             <div className="flex items-center justify-between">
-              <Label>I am not a robot</Label>
+              <Label htmlFor="not_a_robot">I am not a robot</Label>
               <Switch
+                id="not_a_robot"
                 checked={submitEmailData.notARobot}
                 onClick={() => {
                   setSubmitEmailData((prev) => ({
