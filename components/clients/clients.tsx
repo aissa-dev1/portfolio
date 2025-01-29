@@ -17,7 +17,7 @@ function ClientsCarousel() {
   return (
     <Carousel
       className="w-full md:w-[600px] lg:w-[850px] xl:w-[1100px]"
-      plugins={[Autoplay({ delay: 2000 })]}
+      plugins={[Autoplay({ delay: 2000 }) as any]}
     >
       <CarouselContent>
         {clients.map((client) => (
