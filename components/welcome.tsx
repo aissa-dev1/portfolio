@@ -22,12 +22,12 @@ export default function Welcome() {
           Aissa Bedr
         </h1>
       </div>
-      <h3 className="text-2xl font-medium capitalize text-[var(--color)]">
+      <h3 className="text-2xl font-medium capitalize text-color">
         {"@"}Full stack engineer
       </h3>
       <p className="text-lg capitalize">
         Transforming ideas into{" "}
-        <span className="text-[var(--color)]">online realities</span>
+        <span className="text-color">online realities</span>
       </p>
       <a
         href="https://github.com/aissa-dev1"

@@ -17,7 +17,7 @@ export default function Experience() {
   return (
     <SectionSpacing id="experience">
       <SectionStarter>
-        My <span className="text-[var(--color)]">Experience</span>
+        My <span className="text-color">Experience</span>
       </SectionStarter>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-3">
         {experienceDataYears.map((year) => (

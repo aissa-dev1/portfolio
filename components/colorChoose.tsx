@@ -26,7 +26,7 @@ export function ColorChoose() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="outline" size="icon">
-          <div className="size-4 rounded-full bg-[var(--color)]" />
+          <div className="size-4 rounded-full bg-color" />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

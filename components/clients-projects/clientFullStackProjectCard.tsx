@@ -28,13 +28,12 @@ function DemoDialog({ liveSite }: Props) {
           <DialogTitle>Demo Quick Note</DialogTitle>
           <DialogDescription>
             This is a Full Stack web project requiring both front-end and{" "}
-            <span className="text-[var(--color)]">back-end</span>. The front-end
-            is running smoothly, but there might be a slight{" "}
-            <span className="text-[var(--color)]">delay</span> with the back-end
-            as it’s on a <span className="text-[var(--color)]">free plan</span>.
-            Please allow up to{" "}
-            <span className="text-[var(--color)]">1 minute</span> for the
-            initial server response. Thanks for your patience!
+            <span className="text-color">back-end</span>. The front-end is
+            running smoothly, but there might be a slight{" "}
+            <span className="text-color">delay</span> with the back-end as it’s
+            on a <span className="text-color">free plan</span>. Please allow up
+            to <span className="text-color">1 minute</span> for the initial
+            server response. Thanks for your patience!
           </DialogDescription>
           <div className="flex flex-col gap-2 w-full">
             <a href={liveSite} target="_blank">

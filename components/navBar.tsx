@@ -5,8 +5,6 @@ import Container from "./container";
 import useActiveSection from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "./modeToggle";
-import { ColorChoose } from "./colorChoose";
-import { useColor } from "@/hooks/use-color";
 
 interface NavLinkProps {
   href: string;
@@ -23,7 +21,7 @@ function NavLink({ href, content, active, activeSection }: NavLinkProps) {
       className={cn(
         "p-0.5 rounded font-medium transition-colors duration-300",
         {
-          "bg-[var(--color)] text-white": activeSection === active,
+          "bg-color text-white": activeSection === active,
           "hover:opacity-85": activeSection !== active,
         }
       )}

@@ -28,13 +28,12 @@ function DemoDialog({ liveSite }: Props) {
           <DialogTitle>Demo Quick Note</DialogTitle>
           <DialogDescription>
             This is a Full Stack web project requiring both front-end and{" "}
-            <span className="text-[var(--color)]">back-end</span>. The front-end
-            is running smoothly, but there might be a slight{" "}
-            <span className="text-[var(--color)]">delay</span> with the back-end
-            as it’s on a <span className="text-[var(--color)]">free plan</span>.
-            Please allow up to{" "}
-            <span className="text-[var(--color)]">1 minute</span> for the
-            initial server response. Thanks for your patience!
+            <span className="text-color">back-end</span>. The front-end is
+            running smoothly, but there might be a slight{" "}
+            <span className="text-color">delay</span> with the back-end as it’s
+            on a <span className="text-color">free plan</span>. Please allow up
+            to <span className="text-color">1 minute</span> for the initial
+            server response. Thanks for your patience!
           </DialogDescription>
           <div className="flex flex-col gap-2 w-full">
             <a href={liveSite} target="_blank">
@@ -62,10 +61,9 @@ function RepoDialog({ githubRepo }: Props) {
         <DialogHeader className="flex flex-col gap-3.5">
           <DialogTitle>Repo Quick Note</DialogTitle>
           <DialogDescription>
-            This is a <span className="text-[var(--color)]">Full Stack</span>{" "}
-            web project requiring both{" "}
-            <span className="text-[var(--color)]">front-end</span> and{" "}
-            <span className="text-[var(--color)]">back-end</span>.
+            This is a <span className="text-color">Full Stack</span> web project
+            requiring both <span className="text-color">front-end</span> and{" "}
+            <span className="text-color">back-end</span>.
           </DialogDescription>
           <div className="flex flex-col gap-2">
             {repos.map((repo, i) => (

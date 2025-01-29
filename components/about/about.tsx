@@ -10,7 +10,7 @@ export default function About() {
   return (
     <SectionSpacing id="about">
       <SectionStarter>
-        Who is <span className="text-[var(--color)]">Aissa Bedr</span>?
+        Who is <span className="text-color">Aissa Bedr</span>?
       </SectionStarter>
       <div className="flex flex-col gap-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">

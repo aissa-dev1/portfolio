@@ -27,8 +27,7 @@ export default function ContactMeDialog() {
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            Let’s find solutions{" "}
-            <span className="text-[var(--color)]">together?</span>‍
+            Let’s find solutions <span className="text-color">together?</span>‍
           </DialogTitle>
           <DialogDescription>
             Fill the form with your information and needs and submit, let the
