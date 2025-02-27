@@ -33,7 +33,7 @@ export function ColorChoose() {
         {Object.keys(Colors).map((colorKey) => (
           <DropdownMenuItem
             key={colorKey}
-            className="flex items-center justify-center"
+            className="flex__center"
             onClick={() => {
               setColor(colorKey);
             }}
