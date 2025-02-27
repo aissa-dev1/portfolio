@@ -1,5 +1,10 @@
-import { ClientType } from "@/components/clients/clientCard";
 import { random } from "@/utils/random";
+
+type ClientType = {
+  id: string;
+  fullName?: string;
+  message: string;
+};
 
 export const clients: ClientType[] = [
   {
