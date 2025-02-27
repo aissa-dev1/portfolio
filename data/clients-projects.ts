@@ -1,12 +1,14 @@
-import { ClientProjectType } from "@/components/clients-projects/clientProjectCard";
+import { ProjectCardProps } from "@/components/project-card";
 import { random } from "@/utils/random";
 
-export const clientsProjects: ClientProjectType[] = [
+export const clientsProjects: ProjectCardProps[] = [
   {
     id: random.strongId(),
     img: "/projects/digital-success.png",
-    title: "Digital Success - Send Your Company to A Great Success",
-    type: "full",
+    title: "Digital Success",
+    description: "Send Your Company to A Great Success",
+    type: "full-free",
+    for: "client",
     skills: [
       {
         icon: "solid",
@@ -30,8 +32,10 @@ export const clientsProjects: ClientProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/pea-app.png",
-    title: "PEA App - An English Learning Platform",
-    type: "full",
+    title: "PEA App",
+    description: "An English Learning Platform",
+    type: "full-free",
+    for: "client",
     skills: [
       {
         icon: "reactjs",
@@ -59,8 +63,10 @@ export const clientsProjects: ClientProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/lomjati.png",
-    title: "A fast food startup that provides healthy meals",
+    title: "Lomjati",
+    description: "A fast food startup that provides healthy meals",
     type: "front",
+    for: "client",
     skills: [
       {
         icon: "nextjs",
