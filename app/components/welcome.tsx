@@ -1,10 +1,10 @@
 import Image from "next/image";
-import ArrowTopRightIcon from "./icons/arrowTopRight";
-import { Button } from "./ui/button";
+import ArrowTopRightIcon from "../../components/icons/arrow-top-right";
+import { Button } from "../../components/ui/button";
 
 export default function Welcome() {
   return (
-    <div className="flex flex-col items-center justify-center text-center gap-4">
+    <div className="flex__col flex__center text-center gap-4">
       <Image
         className="rounded-full"
         src="/aissa.jpg"
@@ -12,7 +12,7 @@ export default function Welcome() {
         width={200}
         height={200}
       />
-      <div className="flex flex-col items-center gap-2 text-3xl lg:flex-row">
+      <div className="flex__col items-center gap-2 text-3xl lg:flex-row">
         <span>Hello world, I&apos;m</span>
         <h1
           className="font-bold shrink-0"
@@ -23,7 +23,7 @@ export default function Welcome() {
         </h1>
       </div>
       <h3 className="text-2xl font-medium capitalize text-color">
-        {"@"}Full stack engineer
+        {"@"}Full stack web developer
       </h3>
       <p className="text-lg capitalize">
         Transforming ideas into{" "}
