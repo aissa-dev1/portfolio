@@ -1,14 +1,44 @@
-import { ProjectType } from "@/components/projects/projectCard";
+import { ProjectCardProps } from "@/components/project-card";
 import { random } from "@/utils/random";
 
-export const projects: ProjectType[] = [
+export const projects: ProjectCardProps[] = [
+  {
+    id: random.strongId(),
+    img: "/projects/lovepass.png",
+    title: "LovePass",
+    description:
+      "Create & share unique LovePass cards with special messages. No accounts, just love! ❤️",
+    type: "full",
+    for: "me",
+    skills: [
+      {
+        icon: "nextjs",
+        dynamicIcon: true,
+      },
+      {
+        icon: "ts",
+        dynamicIcon: false,
+      },
+      {
+        icon: "tailwindcss",
+        dynamicIcon: false,
+      },
+      {
+        icon: "scss",
+        dynamicIcon: false,
+      },
+    ],
+    githubRepo: "https://github.com/aissa-dev1/lovepass",
+    liveSite: "https://lovepass.vercel.app",
+  },
   {
     id: random.strongId(),
     img: "/projects/poll-next.png",
-    title: "Poll Next - Full Stack Polls Web Application",
+    title: "Poll Next",
     description:
       "Create your Poll Next account, create your own polls, share them with friends and wait their reaction and have fun.",
-    type: "full",
+    type: "full-free",
+    for: "me",
     skills: [
       {
         icon: "reactjs",
@@ -40,9 +70,10 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/global-chat.png",
-    title: "Global Chat - Full Stack Chat Web Application",
+    title: "Global Chat",
     description: "Join and chat with multiple users in real time.",
-    type: "full",
+    type: "full-free",
+    for: "me",
     skills: [
       {
         icon: "solid",
@@ -70,10 +101,11 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/todo-app.png",
-    title: "Todo App - Full Stack to-do Web Application",
+    title: "Todo App",
     description:
       "Create your first account, create your tasks and play with them, they are saved forever don't worry.",
-    type: "full",
+    type: "full-free",
+    for: "me",
     skills: [
       {
         icon: "nextjs",
@@ -105,10 +137,11 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/next-dashboard.png",
-    title: "Next Dashboard - Explore",
+    title: "Next Dashboard",
     description:
       "You want to explore a new world of all web techniques out there? you need to try.",
     type: "front",
+    for: "me",
     skills: [
       {
         icon: "nextjs",
@@ -133,9 +166,10 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/calculator.png",
-    title: "Calculator - Microsoft Calculator Clone",
+    title: "Microsoft Calculator Clone",
     description: "Fully functional calculator with a lot of features.",
     type: "front",
+    for: "me",
     skills: [
       {
         icon: "solid",
@@ -156,10 +190,11 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/budget-app.png",
-    title: "Budget App - Start here",
+    title: "Budget App",
     description:
       "Do you remember when you have a budget to shop, then have a list of products you don't know from where to start! you will start here.",
     type: "front",
+    for: "me",
     skills: [
       {
         icon: "html",
@@ -180,10 +215,11 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/astro-evade.png",
-    title: "Astro Evade - Save The Space",
+    title: "Astro Evade",
     description:
       "From where, we don't know how the space is invaded your goal is to save it from the evil around it.",
     type: "front",
+    for: "me",
     skills: [
       {
         icon: "html",
@@ -204,10 +240,11 @@ export const projects: ProjectType[] = [
   {
     id: random.strongId(),
     img: "/projects/memory-game.png",
-    title: "Memory Game - Solid Game",
+    title: "Memory Game",
     description:
       "Do you have a strong memory to play this game? If yes join the maze.",
     type: "front",
+    for: "me",
     skills: [
       {
         icon: "solid",
