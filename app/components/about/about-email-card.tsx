@@ -1,15 +1,15 @@
 "use client";
 
 import { useClipboard } from "@/hooks/use-clipboard";
-import { Card, CardTitle } from "../ui/card";
-import { Button } from "../ui/button";
-import ClipboardIcon from "../icons/clipboard";
+import { Card, CardTitle } from "../../../components/ui/card";
+import { Button } from "../../../components/ui/button";
+import ClipboardIcon from "../../../components/icons/clipboard";
 
-export default function MyEmailCard() {
+export default function AboutEmailCard() {
   const { copyText } = useClipboard();
 
   return (
-    <Card className="flex flex-col items-center justify-center lg:items-start gap-4 p-6 bg-gradient-to-r from-purple-700/15 to-blue-700/5">
+    <Card className="card card--gradient2 card__spacing card__spacing--centered">
       <CardTitle className="text-center lg:text-start">
         Do you want to start a project together?
       </CardTitle>
