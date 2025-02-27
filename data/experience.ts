@@ -1,10 +1,13 @@
-import { ExperienceCardData } from "@/components/experience/experienceCard";
-
 export const experienceDataYears = ["2022", "2023", "2024", "2025"] as const;
 
 export type ExperienceYear = (typeof experienceDataYears)[number];
 
-export const experienceData2022: ExperienceCardData = {
+export interface ExperienceDataItem {
+  year: ExperienceYear;
+  highlights: string[];
+}
+
+export const experienceData2022: ExperienceDataItem = {
   year: "2022",
   highlights: [
     "The great journey started here.",
@@ -16,7 +19,7 @@ export const experienceData2022: ExperienceCardData = {
   ],
 };
 
-export const experienceData2023: ExperienceCardData = {
+export const experienceData2023: ExperienceDataItem = {
   year: "2023",
   highlights: [
     "Carrying on the journey from 2022.",
@@ -29,7 +32,7 @@ export const experienceData2023: ExperienceCardData = {
   ],
 };
 
-export const experienceData2024: ExperienceCardData = {
+export const experienceData2024: ExperienceDataItem = {
   year: "2024",
   highlights: [
     "The year of mastering the Back End.",
@@ -44,12 +47,12 @@ export const experienceData2024: ExperienceCardData = {
   ],
 };
 
-export const experienceData2025: ExperienceCardData = {
+export const experienceData2025: ExperienceDataItem = {
   year: "2025",
   highlights: ["Started this year with new projects."],
 };
 
-export const experienceData: Record<ExperienceYear, ExperienceCardData> = {
+export const experienceData: Record<ExperienceYear, ExperienceDataItem> = {
   "2022": experienceData2022,
   "2023": experienceData2023,
   "2024": experienceData2024,
