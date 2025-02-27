@@ -1,24 +1,23 @@
-import About from "@/components/about/about";
-import ClientsProjects from "@/components/clients-projects/clientsProjects";
-import Clients from "@/components/clients/clients";
-import Container from "@/components/container";
-import Experience from "@/components/experience/experience";
-import Farewell from "@/components/farewell";
 import Footer from "@/components/footer";
-import Projects from "@/components/projects/projects";
-import Welcome from "@/components/welcome";
+import Projects from "./components/projects";
+import ClientsProjects from "./components/clients-projects";
+import Welcome from "./components/welcome";
+import About from "./components/about";
+import Clients from "./components/clients";
+import Experience from "./components/experience";
+import ContactMe from "./components/contact-me";
 
 export default function Home() {
   return (
-    <Container className="flex flex-col gap-28">
+    <main className="container flex__col gap-sections mt-main">
       <Welcome />
       <About />
       <Projects />
       <Clients />
       <Experience />
       <ClientsProjects />
-      <Farewell />
+      <ContactMe />
       <Footer />
-    </Container>
+    </main>
   );
 }
