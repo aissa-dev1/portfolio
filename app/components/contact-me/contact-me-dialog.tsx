@@ -1,7 +1,7 @@
 "use client";
 
-import { useSubmitEmail } from "@/hooks/use-submit-email";
-import { Button } from "./ui/button";
+import Loader from "@/components/loader";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -9,12 +9,12 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "./ui/dialog";
-import { Input } from "./ui/input";
-import { Label } from "./ui/label";
-import { Switch } from "./ui/switch";
-import { Textarea } from "./ui/textarea";
-import Loader from "./loader";
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Switch } from "@/components/ui/switch";
+import { Textarea } from "@/components/ui/textarea";
+import { useSubmitEmail } from "@/hooks/use-submit-email";
 
 export default function ContactMeDialog() {
   const { submitEmailData, setSubmitEmailData, submitEmail } = useSubmitEmail();
@@ -34,7 +34,7 @@ export default function ContactMeDialog() {
             rest for me.
           </DialogDescription>
           <div className="grid grid-cols-1 gap-3">
-            <div className="flex flex-col gap-2">
+            <div className="flex__col gap-2">
               <Label htmlFor="name" className="w-fit">
                 Your Name
               </Label>
@@ -51,7 +51,7 @@ export default function ContactMeDialog() {
                 }}
               />
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex__col gap-2">
               <Label htmlFor="email" className="w-fit">
                 Your Email
               </Label>
@@ -68,7 +68,7 @@ export default function ContactMeDialog() {
                 }}
               />
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex__col gap-2">
               <Label htmlFor="text" className="w-fit">
                 Your text
               </Label>
