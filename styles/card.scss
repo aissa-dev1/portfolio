@@ -1,0 +1,30 @@
+.card {
+  padding: theme("padding.6");
+
+  &--gradient1 {
+    @apply bg-gradient-to-r from-blue-700/5 to-purple-700/15;
+  }
+
+  &--gradient2 {
+    @apply bg-gradient-to-r from-purple-700/15 to-blue-700/5;
+  }
+}
+
+.card__spacing {
+  display: flex;
+  flex-direction: column;
+  gap: theme("gap.2");
+
+  &--centered,
+  &--responsive {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: theme("screens.lg")) {
+  .card__spacing--responsive {
+    align-items: start;
+    justify-content: start;
+  }
+}
