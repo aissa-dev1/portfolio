@@ -1,30 +1,35 @@
-import { SkillType } from "@/components/about/skill";
+import { SkillProps } from "@/components/skill";
 import { random } from "@/utils/random";
 
-export const programmingLanguages: SkillType[] = [
+export const programmingLanguages: SkillProps[] = [
   {
     id: random.PIN().toString(),
-    icon: { current: "js", dynamicIcon: false },
+    icon: "js",
+    dynamicIcon: false,
     body: "JavaScript",
   },
   {
     id: random.PIN().toString(),
-    icon: { current: "ts", dynamicIcon: false },
+    icon: "ts",
+    dynamicIcon: false,
     body: "TypeScript",
   },
   {
     id: random.PIN().toString(),
-    icon: { current: "rust", dynamicIcon: false },
+    icon: "rust",
+    dynamicIcon: false,
     body: "Rust",
   },
   {
     id: random.PIN().toString(),
-    icon: { current: "c-sharp", dynamicIcon: false },
+    icon: "c-sharp",
+    dynamicIcon: false,
     body: "C#",
   },
   {
     id: random.PIN().toString(),
-    icon: { current: "java", dynamicIcon: false },
+    icon: "java",
+    dynamicIcon: false,
     body: "Java",
   },
 ];
