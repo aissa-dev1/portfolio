@@ -1,13 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0d1117;
+  --foreground-muted: #4b5563;
+  --primary: #7c3aed;
+  --primary-foreground: #f9f7ff;
+  --border: #e5e7eb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0d1117;
+    --foreground: #c9d1d9;
+    --foreground-muted: #8b949e;
+    --primary: #a78bfa;
+    --primary-foreground: #1e1b29;
+    --border: #21262d;
   }
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }
 
 html,
@@ -19,9 +35,19 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "JetBrains Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
+  font-family: "Inter", sans-serif;
 }
 
 * {
@@ -33,10 +59,4 @@ body {
 a {
   color: inherit;
   text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
 }
