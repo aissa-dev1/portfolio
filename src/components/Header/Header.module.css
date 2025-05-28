@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  align-items: center;
+  height: var(--header-height);
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  margin-bottom: calc(0.25 * var(--header-height));
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
