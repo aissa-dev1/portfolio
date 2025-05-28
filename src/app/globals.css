@@ -1,23 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --background: #ffffff;
-  --foreground: #0d1117;
-  --foreground-muted: #4b5563;
-  --primary: #7c3aed;
-  --primary-foreground: #f9f7ff;
-  --border: #e5e7eb;
+  --background: #eeeeee;
+  --foreground: #444444;
+  --primary: #666666;
+  --primary-foreground: #ffffff;
+  --heading-foreground: #111111;
+  --heading2-foreground: #222222;
+  --link-foreground: #222222;
+  --card: #dddddd;
+  --card-foreground: #222222;
+  --border: #cccccc;
+
+  --radius-rounded: 8px;
+
+  --header-height: 100px;
+
+  --montserrat-font: "Montserrat", sans-serif;
+  --assistant-font: "Assistant", sans-serif;
+  --madurai-font: "Hind Madurai", sans-serif;
+
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 0.75rem; /* 12px */
+  --spacing-lg: 1rem; /* 16px */
+  --spacing-xl: 1.5rem; /* 24px */
+  --spacing-2xl: 2rem; /* 32px */
+  --spacing-3xl: 2.5rem; /* 40px */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0d1117;
-    --foreground: #c9d1d9;
-    --foreground-muted: #8b949e;
-    --primary: #a78bfa;
-    --primary-foreground: #1e1b29;
-    --border: #21262d;
+    --background: #222222;
+    --foreground: #aaaaaa;
+    --heading-foreground: #cccccc;
+    --heading2-foreground: #bbbbbb;
+    --link-foreground: #dddddd;
+    --primary: #888888;
+    --primary-foreground: #ffffff;
+    --card: #111111;
+    --card-foreground: #666666;
+    --border: #444444;
   }
 }
 
@@ -35,19 +58,37 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--madurai-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
+h1 {
+  font-family: var(--montserrat-font);
+  font-size: 4.6rem;
+  line-height: 1.1;
+  color: var(--heading-foreground);
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  color: var(--heading2-foreground);
+}
+
+p,
+span {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6,
 button {
-  font-family: "Inter", sans-serif;
+  font-family: var(--assistant-font);
 }
 
 * {
@@ -59,4 +100,10 @@ button {
 a {
   color: inherit;
   text-decoration: none;
+  color: var(--link-foreground);
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--primary);
+  }
 }
