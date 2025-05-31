@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Hind+Madurai:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --background: #eeeeee;
-  --foreground: #444444;
-  --primary: #666666;
+  --background: #f9f9f9;
+  --foreground: #333333;
+  --primary: #506a85;
+  --primary-hover: #3f5771;
+  --primary-active: #354b63;
   --primary-foreground: #ffffff;
   --heading-foreground: #111111;
   --heading2-foreground: #222222;
-  --link-foreground: #222222;
-  --card: #dddddd;
+  --link-foreground: #385e8e;
+  --card: #ffffff;
   --card-foreground: #222222;
-  --border: #cccccc;
+  --border: rgba(0, 0, 0, 0.1);
 
   --radius-rounded: 8px;
 
@@ -27,20 +29,29 @@
   --spacing-xl: 1.5rem; /* 24px */
   --spacing-2xl: 2rem; /* 32px */
   --spacing-3xl: 2.5rem; /* 40px */
+
+  --font-size-xs: 0.75rem; /* 12px */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.125rem; /* 18px */
+  --font-size-xl: 1.25rem; /* 20px */
+  --font-size-2xl: 1.5rem; /* 24px */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #222222;
-    --foreground: #aaaaaa;
-    --heading-foreground: #cccccc;
-    --heading2-foreground: #bbbbbb;
-    --link-foreground: #dddddd;
-    --primary: #888888;
+    --background: #1c1c1c;
+    --foreground: #bbbbbb;
+    --heading-foreground: #e0e0e0;
+    --heading2-foreground: #c0c0c0;
+    --link-foreground: #7faaff;
+    --primary: #789ecf;
+    --primary-hover: #6890c5;
+    --primary-active: #587fb1;
     --primary-foreground: #ffffff;
     --card: #111111;
-    --card-foreground: #666666;
-    --border: #444444;
+    --card-foreground: #dddddd;
+    --border: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -82,6 +93,39 @@ span {
   line-height: 1.6;
 }
 
+button {
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  width: 150px;
+  height: 48px;
+  border-radius: var(--radius-rounded);
+  text-transform: uppercase;
+  font-size: var(--font-size-base);
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+}
+
+button:active {
+  background-color: var(--primary-active);
+}
+
+button:focus-visible {
+  outline: 2px solid var(--border);
+  outline-offset: 4px;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
 h2,
 h3,
 h4,
@@ -100,10 +144,9 @@ button {
 a {
   color: inherit;
   text-decoration: none;
-  color: var(--link-foreground);
+}
 
-  &:hover {
-    text-decoration: underline;
-    color: var(--primary);
-  }
+a:hover,
+a[data-active="true"] {
+  color: var(--primary);
 }

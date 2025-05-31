@@ -11,7 +11,9 @@ const Header: React.FC<Props> = () => {
     <header className={styles.header}>
       <Container className={styles.container}>
         <nav className={styles.nav}>
-          <Link href="/">Home</Link>
+          <Link href="/" data-active="true">
+            Home
+          </Link>
           <Link href="/about">About</Link>
           <Link href="/projects">Projects</Link>
         </nav>
