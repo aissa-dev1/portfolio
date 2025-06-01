@@ -1,0 +1,57 @@
+.h1 {
+  font-size: 2rem;
+  font-family: var(--montserrat-font);
+  line-height: 1.1;
+  color: var(--heading-foreground);
+}
+
+.h2 {
+  font-size: 1.5rem;
+  font-family: var(--assistant-font);
+  line-height: 1.2;
+  color: var(--heading2-foreground);
+}
+
+.p,
+.span {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.primary {
+  color: var(--primary);
+}
+
+@media screen and (min-width: 576px) {
+  .h1 {
+    font-size: 3rem;
+  }
+
+  .h2 {
+    font-size: 2rem;
+  }
+
+  .p,
+  .span {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 992px) {
+  .h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .h1 {
+    font-size: 4.6rem;
+  }
+
+  .h2 {
+    font-size: 2.5rem;
+  }
+}
