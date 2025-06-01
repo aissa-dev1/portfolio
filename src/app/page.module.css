@@ -1,7 +1,11 @@
-.h2 {
-  color: var(--primary);
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
 }
 
-.text {
-  color: var(--primary);
+.jobTitleAndDescription {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
 }

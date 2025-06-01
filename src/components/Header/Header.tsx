@@ -11,11 +11,15 @@ const Header: React.FC<Props> = () => {
     <header className={styles.header}>
       <Container className={styles.container}>
         <nav className={styles.nav}>
-          <Link href="/" data-active="true">
+          <Link tabIndex={1} href="/" data-active="true">
             Home
           </Link>
-          <Link href="/about">About</Link>
-          <Link href="/projects">Projects</Link>
+          <Link tabIndex={2} href="/about">
+            About
+          </Link>
+          <Link tabIndex={3} href="/projects">
+            Projects
+          </Link>
         </nav>
         <div>
           <p>Github</p>
