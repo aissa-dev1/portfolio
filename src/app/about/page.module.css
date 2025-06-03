@@ -3,3 +3,32 @@
   flex-direction: column;
   gap: var(--spacing-lg);
 }
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.skillsCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+}
+
+.skillsCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.skillsCards p:first-child {
+  font-weight: 600;
+  color: var(--card-foreground);
+}

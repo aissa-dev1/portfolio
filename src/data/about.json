@@ -1,0 +1,46 @@
+[
+  {
+    "heading": "How It Started",
+    "content": "Back in 2019 I was watching my cousin (Mohamed Bedr) write some instructions on the screen, and with them, he creates something. He was into web development. I chose to sit with him every time I saw him doing that. I started asking questions — what's this and why it matters. I didn’t touch a single line of code or open any IDE, just observing, for almost 3 years..."
+  },
+  {
+    "heading": "The First Step",
+    "content": "In 2022, I bought my first computer. That was the start. I began learning to code, and my cousin guided me into this new world. I started with C++, and man... it was hard. I finished the course and didn’t even understand anything, lol. Then I moved to HTML. It felt easier because I could see what I was building on the UI. That was enough for me to say, this path is different."
+  },
+  {
+    "heading": "Silent Learning",
+    "content": "I taught myself in silence. Nobody was watching, and if they were, they wouldn't get what I was doing anyway. My cousin was the only one who understood. I kept building things I liked and learning nonstop. No need to prove anything to anyone — just doing what I love quietly."
+  },
+  {
+    "heading": "The Hardest Part",
+    "content": "After 1.5 years, I decided to switch from frontend to backend. That period almost made me quit. I thought, 'I’m not made for this.' But I took a breath and rethought things. If others could do it, I could too. And now, here I am writing TypeScript and NestJS like it’s the easiest thing invented."
+  },
+  {
+    "heading": "What I Love Most",
+    "content": "What I love most? Writing code that shows up on the UI exactly how I imagined it. Solving a bug that had me stuck. Opening VSCode when life gets rough and forgetting everything. Starting at 12PM and boom — it's 7PM. That magical flow."
+  },
+  {
+    "heading": "My Current Tools",
+    "content": "Now I use TypeScript, Next.js, and NestJS. I’m just building stuff with them. I can adapt fast to other tools too, but those three? I love them the most. I’m not chasing anything — just in my calm era, building and learning. When I get stuck, I either figure it out or take a break. Simple."
+  },
+  {
+    "heading": "The Ancient PC",
+    "content": "Most people don’t know this, but I did all of that with a prehistoric computer. It couldn’t run Chrome properly. Burned already. Specs? Core 2 Duo, 2GB RAM, HDD, and a monitor that couldn’t even show the difference between grey and white. But that old PC helped me get here, and I’ll never forget it."
+  },
+  {
+    "heading": "Life Beyond Code",
+    "content": "For the first years of my journey, I was locked in my room coding all day. But life gets serious. I learned to shift: now I code, study at university, hit the gym, hang with friends, and play my favorite games. Balance is part of the process."
+  },
+  {
+    "heading": "The School Struggle",
+    "content": "Back in high school, I wanted to take the science path, but my family said I wouldn’t succeed — they thought it was too hard. So they pushed me into literature. I wanted science because of computer science. So I studied one thing in school and coded another at home. That wasn’t easy, but I managed. In my first year at university, I became the best in my class. Coding didn’t make it harder — it made it easier. It changed my whole way of thinking."
+  },
+  {
+    "heading": "More Than Code",
+    "content": "Now I’m in my third and final year of university, studying English as a foreign language. It helped me see the beauty in both logic and art. Outside of code, I read books, explore dark fantasy, write down my thoughts, dreams, tasks — I just love learning and growing, in any area."
+  },
+  {
+    "heading": "Why It Matters",
+    "content": "Coding changed my life. I became disciplined in an age where everyone’s scrolling all day. My time feels too valuable for that. When something bad happens in real life, I treat it like a bug — I break it down, look from different angles, and solve it. I don’t see code as a hobby or a job — it’s more than a life to me. It taught me things I never thought I’d reach. If my past self saw me now? He wouldn’t believe this story."
+  }
+]

@@ -1,0 +1,19 @@
+.card {
+  background-color: var(--card);
+  border-radius: var(--radius-rounded);
+  border: 1px solid var(--border);
+}
+
+.cardHeader {
+  padding-inline: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+}
+
+.cardContent {
+  padding: var(--spacing-lg);
+}
+
+.cardFooter {
+  padding-inline: var(--spacing-lg);
+  padding-bottom: var(--spacing-lg);
+}
