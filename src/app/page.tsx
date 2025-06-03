@@ -6,10 +6,11 @@ import { Container } from "@/components/Container";
 import { H1, H2, P, TypographyVariant } from "@/components/Typography";
 import { Button } from "@/components/Button";
 import { LogoLazy } from "@/components/Logo/LogoLazy";
+import { Main } from "@/components/Main";
 
 export default function Home() {
   return (
-    <main>
+    <Main>
       <Container className={styles.container}>
         <LogoLazy />
         <H1>Hey, It's me Aissa Bedr</H1>
@@ -24,10 +25,10 @@ export default function Home() {
         </div>
         <div>
           <Link href="/contact">
-            <Button tabIndex={4}>Reach out</Button>
+            <Button tabIndex={4}>Contact me</Button>
           </Link>
         </div>
       </Container>
-    </main>
+    </Main>
   );
 }

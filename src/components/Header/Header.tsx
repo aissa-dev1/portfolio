@@ -1,8 +1,8 @@
-import Link from "next/link";
-
 import styles from "./Header.module.css";
 
 import { Container } from "../Container";
+import { HeaderNavLink } from "./HeaderNavLink";
+import Image from "next/image";
 
 interface Props {}
 
@@ -11,15 +11,15 @@ const Header: React.FC<Props> = () => {
     <header className={styles.header}>
       <Container className={styles.container}>
         <nav className={styles.nav}>
-          <Link tabIndex={1} href="/" data-active="true">
+          <HeaderNavLink tabIndex={1} href="/">
             Home
-          </Link>
-          <Link tabIndex={2} href="/about">
+          </HeaderNavLink>
+          <HeaderNavLink tabIndex={2} href="/about">
             About
-          </Link>
-          <Link tabIndex={3} href="/projects">
+          </HeaderNavLink>
+          <HeaderNavLink tabIndex={3} href="/projects">
             Projects
-          </Link>
+          </HeaderNavLink>
         </nav>
         <div>
           <p>Github</p>
