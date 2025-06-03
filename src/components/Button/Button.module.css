@@ -7,7 +7,6 @@
   width: 150px;
   height: 48px;
   border-radius: var(--radius-rounded);
-  text-transform: uppercase;
   font-size: var(--font-size-base);
   font-weight: 700;
   cursor: pointer;
