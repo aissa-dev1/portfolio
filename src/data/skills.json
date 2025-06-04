@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Languages",
+    "list": ["JavaScript", "TypeScript", "Rust", "GDScript", "C#", "Java"]
+  },
+  {
+    "name": "Front-End",
+    "list": [
+      "Next.js",
+      "React",
+      "Solid",
+      "Svelte",
+      "SvelteKit",
+      "SCSS",
+      "TailwindCSS"
+    ]
+  },
+  {
+    "name": "Back-End",
+    "list": ["NestJS", "Express", "WebSockets"]
+  },
+  {
+    "name": "DevOps",
+    "list": ["Github"]
+  },
+  {
+    "name": "Databases",
+    "list": ["MongoDB"]
+  }
+]

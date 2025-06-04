@@ -2,6 +2,7 @@ import { ComponentProps } from "react";
 import clsx from "clsx";
 
 import styles from "./Card.module.css";
+import { P, Span } from "../Typography";
 
 interface CardProps extends ComponentProps<"div"> {}
 
@@ -27,4 +28,26 @@ const CardFooter: React.FC<CardFooterProps> = ({ className, ...rest }) => {
   return <div className={clsx(styles.cardFooter, className)} {...rest} />;
 };
 
-export { Card, CardHeader, CardContent, CardFooter };
+interface CardTitleProps extends ComponentProps<"span"> {}
+
+const CardTitle: React.FC<CardTitleProps> = ({ className, ...rest }) => {
+  return <Span className={clsx(styles.cardTitle, className)} {...rest} />;
+};
+
+interface CardDescriptionProps extends ComponentProps<"p"> {}
+
+const CardDescription: React.FC<CardDescriptionProps> = ({
+  className,
+  ...rest
+}) => {
+  return <P className={clsx(styles.cardDescription, className)} {...rest} />;
+};
+
+export {
+  Card,
+  CardHeader,
+  CardContent,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+};
