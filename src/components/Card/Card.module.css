@@ -17,3 +17,11 @@
   padding-inline: var(--spacing-lg);
   padding-bottom: var(--spacing-lg);
 }
+
+.cardTitle {
+  color: var(--card-foreground);
+  font-weight: 600;
+}
+
+.cardDescription {
+}
