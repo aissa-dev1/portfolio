@@ -34,13 +34,30 @@ const CardTitle: React.FC<CardTitleProps> = ({ className, ...rest }) => {
   return <Span className={clsx(styles.cardTitle, className)} {...rest} />;
 };
 
-interface CardDescriptionProps extends ComponentProps<"p"> {}
+enum CardDescriptionVariant {
+  Default = "default",
+  Primary = "primaryText",
+}
+
+interface CardDescriptionProps extends ComponentProps<"p"> {
+  variant?: CardDescriptionVariant;
+}
 
 const CardDescription: React.FC<CardDescriptionProps> = ({
   className,
+  variant = CardDescriptionVariant.Default,
   ...rest
 }) => {
-  return <P className={clsx(styles.cardDescription, className)} {...rest} />;
+  return (
+    <P
+      className={clsx(
+        styles.cardDescription,
+        variant !== CardDescriptionVariant.Default && styles[variant],
+        className
+      )}
+      {...rest}
+    />
+  );
 };
 
 export {
@@ -50,4 +67,5 @@ export {
   CardFooter,
   CardTitle,
   CardDescription,
+  CardDescriptionVariant,
 };

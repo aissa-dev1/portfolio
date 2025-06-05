@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import styles from "./page.module.css";
 
-import { Container } from "@/components/Container";
+import { Container, ContainerSpacing } from "@/components/Container";
 import { H1, H2, P, TypographyVariant } from "@/components/Typography";
 import { Button } from "@/components/Button";
 import { LogoLazy } from "@/components/Logo/LogoLazy";
@@ -11,7 +11,7 @@ import { Main } from "@/components/Main";
 export default function Home() {
   return (
     <Main>
-      <Container className={styles.container}>
+      <Container spacing={ContainerSpacing.Large}>
         <LogoLazy />
         <H1>Hey, It's me Aissa Bedr</H1>
         <div className={styles.jobTitleAndDescription}>
