@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 
-import { Container } from "@/components/Container";
+import { Container, ContainerSpacing } from "@/components/Container";
 import { H1, H2, P } from "@/components/Typography";
 import { LogoLazy } from "@/components/Logo/LogoLazy";
 import { Main } from "@/components/Main";
@@ -17,7 +17,7 @@ import skills from "@/data/skills.json";
 export default function About() {
   return (
     <Main>
-      <Container className={styles.container}>
+      <Container spacing={ContainerSpacing.Large}>
         <LogoLazy />
         <H1>About me</H1>
         <div className={styles.wrapper}>

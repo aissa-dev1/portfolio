@@ -25,3 +25,7 @@
 
 .cardDescription {
 }
+
+.primaryText {
+  color: var(--primary);
+}

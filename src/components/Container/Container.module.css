@@ -7,6 +7,12 @@
   width: 100%;
 }
 
+.spacingLg {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
 @media screen and (min-width: 576px) {
   .container {
     width: 576px;

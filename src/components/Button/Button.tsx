@@ -21,7 +21,7 @@ const Button: React.FC<Props> = ({
     <button
       className={clsx(
         styles.button,
-        size === ButtonSize.Small && styles.sizeSm,
+        size !== ButtonSize.Default && styles[size],
         className
       )}
       {...rest}

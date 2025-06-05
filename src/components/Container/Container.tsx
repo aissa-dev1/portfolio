@@ -3,10 +3,30 @@ import clsx from "clsx";
 
 import styles from "./Container.module.css";
 
-interface Props extends ComponentProps<"div"> {}
+enum ContainerSpacing {
+  None = "none",
+  Large = "spacingLg",
+}
 
-const Container: React.FC<Props> = ({ className, ...rest }) => {
-  return <div className={clsx(styles.container, className)} {...rest} />;
+interface Props extends ComponentProps<"div"> {
+  spacing?: ContainerSpacing;
+}
+
+const Container: React.FC<Props> = ({
+  className,
+  spacing = ContainerSpacing.None,
+  ...rest
+}) => {
+  return (
+    <section
+      className={clsx(
+        styles.container,
+        spacing !== ContainerSpacing.None && styles[spacing],
+        className
+      )}
+      {...rest}
+    />
+  );
 };
 
-export { Container };
+export { Container, ContainerSpacing };
