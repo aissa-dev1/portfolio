@@ -1,0 +1,49 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-rounded);
+}
+
+.image {
+  width: 100%;
+  border-radius: var(--radius-rounded);
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  background-color: var(--card);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.dot:not([data-active="true"]):hover {
+  transform: scale(1.1);
+}
+
+.dot[data-active="true"] {
+  background-color: var(--primary);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
