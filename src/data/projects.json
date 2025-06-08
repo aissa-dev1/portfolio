@@ -2,16 +2,19 @@
   {
     "name": "Taleswyn",
     "slug": "taleswyn",
-    "site": "https://taleswyn.vercel.app"
+    "site": "https://taleswyn.vercel.app",
+    "images": ["1.png", "2.png", "3.png", "4.png", "5.png"]
   },
   {
     "name": "LovePass",
     "slug": "lovepass",
-    "site": "https://lovepass.vercel.app"
+    "site": "https://lovepass.vercel.app",
+    "images": ["1.png", "2.png", "3.png"]
   },
   {
     "name": "Lomjati",
     "slug": "lomjati",
-    "site": "https://lomjati.vercel.app"
+    "site": "https://lomjati.vercel.app",
+    "images": ["1.png", "2.png"]
   }
 ]

@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import { Container, ContainerSpacing } from "@/components/Container";
 import { Main } from "@/components/Main";
 import { H2 } from "@/components/Typography";
+import { ProjectSlider } from "@/components/ProjectSlider";
 
 import projects from "@/data/projects.json";
 
@@ -27,7 +28,8 @@ export default async function Project({ params }: Props) {
   return (
     <Main>
       <Container spacing={ContainerSpacing.Large}>
-        <H2>{project.name}</H2>
+        <H2 className={styles.name}>{project.name}</H2>
+        <ProjectSlider images={project.images} slug={slug} />
       </Container>
     </Main>
   );
