@@ -23,11 +23,9 @@ export default function Home() {
             the frontend or backend.
           </P>
         </div>
-        <div>
-          <Link href="/contact">
-            <Button tabIndex={4}>Contact me</Button>
-          </Link>
-        </div>
+        <Link href="/contact">
+          <Button tabIndex={4}>Contact me</Button>
+        </Link>
       </Container>
     </Main>
   );

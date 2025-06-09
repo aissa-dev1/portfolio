@@ -3,18 +3,39 @@
     "name": "Taleswyn",
     "slug": "taleswyn",
     "site": "https://taleswyn.vercel.app",
-    "images": ["1.png", "2.png", "3.png", "4.png", "5.png"]
+    "images": ["1.png", "2.png", "3.png", "4.png", "5.png"],
+    "description": [
+      "A dark fantasy tales web app, client-side only for now.",
+      "Built with Next.js, TypeScript, SCSS modules. Backend is ready (NestJS), just not used yet.",
+      "The theme is deep and old, like lost magic—animated pages, tale carousels, custom fonts, and a calm reading experience.",
+      "Built it all solo: frontend, backend, design. Took 3 months of focus and experiments.",
+      "It’s the place where I poured my imagination in—no rules, no limits. Learned a lot about server components, Suspense, and Error Boundaries."
+    ]
   },
   {
     "name": "LovePass",
     "slug": "lovepass",
     "site": "https://lovepass.vercel.app",
-    "images": ["1.png", "2.png", "3.png"]
+    "images": ["1.png", "2.png", "3.png"],
+    "description": [
+      "A full-stack love cards app, built for my mom on February 14.",
+      "Uses Next.js, TypeScript, TailwindCSS, and backend routes.",
+      "I created everything: frontend, backend, design.",
+      "Didn’t build it to learn, just followed a loving mood that day.",
+      "Simple, soft, straight from the heart."
+    ]
   },
   {
     "name": "Lomjati",
     "slug": "lomjati",
     "site": "https://lomjati.vercel.app",
-    "images": ["1.png", "2.png"]
+    "images": ["1.png", "2.png"],
+    "description": [
+      "A static website for a healthy food startup run by a student in my university.",
+      "Built with Next.js, TypeScript, and TailwindCSS.",
+      "I handled the frontend based on the design he gave me.",
+      "It was the first time I turned someone’s real-world idea into an online product.",
+      "Made me realize that people out there really do need devs like us."
+    ]
   }
 ]

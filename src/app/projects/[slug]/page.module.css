@@ -1,3 +1,9 @@
 .name {
   text-align: center;
 }
+
+.descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
