@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
+import clsx from "clsx";
 
 import styles from "./ProjectSlider.module.css";
 
-import { Button, ButtonSize } from "../Button";
+import { ChevronLeftIcon, ChevronRightIcon } from "../icons";
 
 interface Props {
   images: string[];
@@ -15,15 +15,17 @@ interface Props {
 const ProjectSlider: React.FC<Props> = ({ images, slug }) => {
   const [current, setCurrent] = useState(0);
   const image = images[current];
+  const canScrollPrev = current > 0;
+  const canScrollNext = current < images.length - 1;
 
   function handlePrev() {
-    if (current > 0) {
+    if (canScrollPrev) {
       setCurrent((prev) => prev - 1);
     }
   }
 
   function handleNext() {
-    if (current < images.length - 1) {
+    if (canScrollNext) {
       setCurrent((prev) => prev + 1);
     }
   }
@@ -42,6 +44,24 @@ const ProjectSlider: React.FC<Props> = ({ images, slug }) => {
           src={`/projects/${slug}/${image}`}
           alt={`Project image ${current}`}
         />
+        {canScrollPrev && (
+          <div
+            className={clsx(styles.actionButton, styles.prevAction)}
+            role="button"
+            onClick={handlePrev}
+          >
+            <ChevronLeftIcon />
+          </div>
+        )}
+        {canScrollNext && (
+          <div
+            className={clsx(styles.actionButton, styles.nextAction)}
+            role="button"
+            onClick={handleNext}
+          >
+            <ChevronRightIcon />
+          </div>
+        )}
       </div>
       <div className={styles.dots}>
         {images.map((_, index) => (
@@ -50,16 +70,9 @@ const ProjectSlider: React.FC<Props> = ({ images, slug }) => {
             className={styles.dot}
             data-active={current === index}
             onClick={() => handleDotClick(index)}
+            role="button"
           />
         ))}
-      </div>
-      <div className={styles.actions}>
-        <Button size={ButtonSize.Small} onClick={handlePrev}>
-          Prev
-        </Button>
-        <Button size={ButtonSize.Small} onClick={handleNext}>
-          Next
-        </Button>
       </div>
     </div>
   );

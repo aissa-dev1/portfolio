@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 import styles from "./page.module.css";
 
 import { Container, ContainerSpacing } from "@/components/Container";
 import { Main } from "@/components/Main";
-import { H2 } from "@/components/Typography";
+import { H2, P } from "@/components/Typography";
 import { ProjectSlider } from "@/components/ProjectSlider";
+import { Button } from "@/components/Button";
 
 import projects from "@/data/projects.json";
 
@@ -30,6 +32,14 @@ export default async function Project({ params }: Props) {
       <Container spacing={ContainerSpacing.Large}>
         <H2 className={styles.name}>{project.name}</H2>
         <ProjectSlider images={project.images} slug={slug} />
+        <div className={styles.descriptions}>
+          {project.description.map((content, index) => (
+            <P key={index}>{content}</P>
+          ))}
+        </div>
+        <a href={project.site} target="_blank">
+          <Button>Live preview</Button>
+        </a>
       </Container>
     </Main>
   );

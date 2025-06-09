@@ -5,12 +5,14 @@
 }
 
 .imageWrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-rounded);
+  user-select: none;
 }
 
 .image {
@@ -42,8 +44,34 @@
   background-color: var(--primary);
 }
 
-.actions {
+.actionButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  width: 30px;
+  height: 50px;
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+
+.prevAction {
+  left: 0;
+  border-left: none;
+}
+
+.nextAction {
+  right: 0;
+  border-right: none;
+}
+
+@media screen and (min-width: 768px) {
+  .actionButton {
+    width: 40px;
+    height: 60px;
+  }
 }
