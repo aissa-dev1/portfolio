@@ -22,7 +22,7 @@ const Header: React.FC<Props> = () => {
           </HeaderNavLink>
         </nav>
         <a
-          href="https://github.com/aissa-dev1"
+          href={`https://github.com/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`}
           target="_blank"
           className={styles.githubLink}
         >

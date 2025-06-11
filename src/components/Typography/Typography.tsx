@@ -6,6 +6,7 @@ import styles from "./Typography.module.css";
 enum TypographyVariant {
   Default = "default",
   Primary = "primary",
+  Error = "error",
 }
 
 interface SharedProps {
@@ -29,7 +30,7 @@ const H2: React.FC<H2Props> = ({
     <h2
       className={clsx(
         styles.h2,
-        variant === TypographyVariant.Primary && styles.primary,
+        variant !== TypographyVariant.Default && styles[variant],
         className
       )}
       {...rest}
@@ -39,8 +40,21 @@ const H2: React.FC<H2Props> = ({
 
 interface ParagraphProps extends ComponentProps<"p">, SharedProps {}
 
-const P: React.FC<ParagraphProps> = ({ className, ...rest }) => {
-  return <p className={clsx(styles.p, className)} {...rest} />;
+const P: React.FC<ParagraphProps> = ({
+  className,
+  variant = TypographyVariant.Default,
+  ...rest
+}) => {
+  return (
+    <p
+      className={clsx(
+        styles.p,
+        variant !== TypographyVariant.Default && styles[variant],
+        className
+      )}
+      {...rest}
+    />
+  );
 };
 
 interface SpanProps extends ComponentProps<"span">, SharedProps {}
