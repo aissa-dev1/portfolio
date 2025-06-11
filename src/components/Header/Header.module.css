@@ -29,3 +29,18 @@
   color: var(--primary);
   outline: none;
 }
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.githubLink svg {
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+
+.githubLink:hover svg {
+  color: var(--primary);
+}
