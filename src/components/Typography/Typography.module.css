@@ -22,6 +22,10 @@
   color: var(--primary);
 }
 
+.error {
+  color: var(--destructive);
+}
+
 @media screen and (min-width: 576px) {
   .h1 {
     font-size: 3rem;

@@ -12,6 +12,8 @@
   --link-foreground: #385e8e;
   --card: #ffffff;
   --card-foreground: #222222;
+  --destructive: #e54b4b;
+  --destructive-foreground: #ffffff;
   --border: rgba(0, 0, 0, 0.1);
 
   --radius-rounded: 8px;
@@ -51,6 +53,8 @@
     --primary-foreground: #ffffff;
     --card: #111111;
     --card-foreground: #dddddd;
+    --destructive: #ff6b6b;
+    --destructive-foreground: #1c1c1c;
     --border: rgba(255, 255, 255, 0.1);
   }
 }

@@ -1,0 +1,13 @@
+.input {
+  background-color: var(--card);
+  color: var(--card-foreground);
+  border: 1px solid var(--border);
+  outline: none;
+  border-radius: var(--radius-rounded);
+  padding-inline: var(--spacing-md);
+  height: 48px;
+}
+
+.input:focus {
+  border-color: var(--primary);
+}

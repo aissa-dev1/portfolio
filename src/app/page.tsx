@@ -17,10 +17,10 @@ export default function Home() {
         <div className={styles.jobTitleAndDescription}>
           <H2 variant={TypographyVariant.Primary}>Full Stack Developer</H2>
           <P>
-            A self-taught developer with 3+ years of experience in web
-            development, specializing in TypeScript, Next.js, and Nest.js. I
-            enjoy building fast, scalable, and reusable components, whether for
-            the frontend or backend.
+            A self-taught developer with {new Date().getFullYear() - 2022}+
+            years of experience in web development, specializing in TypeScript,
+            Next.js, and Nest.js. I enjoy building fast, scalable, and reusable
+            components, whether for the frontend or backend.
           </P>
         </div>
         <Link href="/contact">
