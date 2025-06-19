@@ -13,6 +13,19 @@
     ]
   },
   {
+    "name": "Love1Code",
+    "slug": "love1code",
+    "site": "https://love1code.vercel.app",
+    "images": ["1.png", "2.png", "3.png", "4.png"],
+    "description": [
+      "Love1Code is a collection of emotionally-driven web experiments — built with code, styled with care, and shared to bring a little joy to the internet.",
+      "It’s not about teaching. It’s not about trends. It’s about making people smile through cute, poetic, and interactive mini-projects.",
+      "Everything is handcrafted with TypeScript, Next.js, and CSS modules — minimal, fast, and expressive.",
+      "Love1Code is where I mix emotion with frontend logic — clean interfaces, soft themes, and creative touches in every interaction.",
+      "More than code — it’s digital affection, shared through pixels and ideas. Built to test, learn, and connect with real people online."
+    ]
+  },
+  {
     "name": "LovePass",
     "slug": "lovepass",
     "site": "https://lovepass.vercel.app",
