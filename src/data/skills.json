@@ -25,6 +25,6 @@
   },
   {
     "name": "Databases",
-    "list": ["MongoDB"]
+    "list": ["PostgreSQL", "MongoDB"]
   }
 ]
