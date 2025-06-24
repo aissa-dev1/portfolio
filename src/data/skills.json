@@ -1,7 +1,7 @@
 [
   {
     "name": "Languages",
-    "list": ["JavaScript", "TypeScript", "Rust", "GDScript", "C#", "Java"]
+    "list": ["JavaScript", "TypeScript", "Go"]
   },
   {
     "name": "Front-End",
